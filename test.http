@@ -1,0 +1,73 @@
+POST http://127.0.0.1:8000/customer/signup/
+Content-Type: application/json
+
+{
+  "username": "mohsen43434",
+  "password": "Moertkl2!##2",
+  "retype_password": "Moertkl2!##2",
+  "email": "mohebmoallem137262@gmail.com",
+  "first_name": "moheb1",
+  "last_name": "moallem",
+  "city": "minoo",
+  "address": "address 2345"
+}
+
+###
+POST http://127.0.0.1:8000/customer/login/
+Content-Type: application/json
+
+{
+  "username": "mohsen43434",
+  "password": "Moertkl2!##2"
+}
+
+###
+
+GET http://127.0.0.1:8000/customer/hello/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDQ1MDExLCJpYXQiOjE2NjkwNDQ3MTEsImp0aSI6IjgzZDI0YTJkNTI0YjRjNjJiNWU2NGFiZDA4MTA4ZGQ4IiwidXNlcl9pZCI6M30._Sdj_fixQI8J8Qzzxta9k2dQt0yvsgxiom3W-cEjVtU
+
+###
+PUT http://127.0.0.1:8000/customer/verify-code/249067/
+
+###
+POST http://127.0.0.1:8000/account/create/?account_type=type2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA1Mzg3LCJpYXQiOjE2NjkzOTQ1ODcsImp0aSI6ImMzMzg3M2VjNGJiMTQ3ZDU5NjM3ZjA3OTIwMDE2NTBiIiwidXNlcl9pZCI6M30.0xyH__Q91paR2qTR4fxkd6v1FqYhoZhCAcfFiwhntIM
+
+###
+
+POST http://127.0.0.1:8000/account/deposit/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA1Mzg3LCJpYXQiOjE2NjkzOTQ1ODcsImp0aSI6ImMzMzg3M2VjNGJiMTQ3ZDU5NjM3ZjA3OTIwMDE2NTBiIiwidXNlcl9pZCI6M30.0xyH__Q91paR2qTR4fxkd6v1FqYhoZhCAcfFiwhntIM
+
+{
+  "account_number": "8852189195583461",
+  "amount": 1000,
+  "explains": "for bones"
+}
+
+###
+POST http://127.0.0.1:8000/account/withdraw/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MzA2ODU2LCJpYXQiOjE2NjkyOTYwNTYsImp0aSI6IjA0OGY0YjRjNDdmYzQ5OGNhNmRjOWFjZWFhYzUwMWFiIiwidXNlcl9pZCI6N30.o3m9IYhzSjnQYYxPKCpDgYT2sYVibLpUkoIdTrurXqw
+
+{
+  "account_number": "9748825457843563",
+  "amount": 400,
+  "explains": "for bones"
+}
+
+###
+POST http://127.0.0.1:8000/account/fund-transfer/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5Mjg5MTE1LCJpYXQiOjE2NjkyNzgzMTUsImp0aSI6IjNjNjE4NjBlYjhmODQ3Y2JhMzMwOTdiNDFhNjYwOWYyIiwidXNlcl9pZCI6N30.lSCbojF-37OkMljMF7eiDmsztXzXlmD_Im8rsIctJ-Q
+
+{
+  "from_account_number": "9748825457843563",
+  "to_account_number": "3530038139179984",
+  "amount": 40000,
+  "explains": "for bones"
+}
+
+###
+GET http://127.0.0.1:8000/account/get-transaction/2230198324/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA1Mzg3LCJpYXQiOjE2NjkzOTQ1ODcsImp0aSI6ImMzMzg3M2VjNGJiMTQ3ZDU5NjM3ZjA3OTIwMDE2NTBiIiwidXNlcl9pZCI6M30.0xyH__Q91paR2qTR4fxkd6v1FqYhoZhCAcfFiwhntIM
